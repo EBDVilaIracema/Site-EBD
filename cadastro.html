@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/StyleSheet.css">
+    <link rel="stylesheet" href="style/buttons.css"> <!-- Link para o CSS dos botões -->
+    <link rel="stylesheet" href="style/sidebar.css"> <!-- Inclua o CSS do menu -->
+</head>
+<body>
+
+<header>
+    <h1 class="display-4 text-center my-4">Gerenciamento de Turmas</h1>
+</header>
+<!-- Botão do menu fora do header -->
+<button id="openSidebar" class="button" style="position: fixed; right: 10px; top: 10px; z-index: 1100;">
+    Menu
+</button>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card shadow-lg p-4">
+                <h2 class="h4 text-center">Cadastro de Turmas</h2>
+                <form id="classForm">
+                    <div class="form-group">
+                        <label for="classDate">Data</label>
+                        <input type="date" class="form-control" id="classDate" required >
+                        <small class="form-text text-muted">Data do cadastro da turma.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentClass">Classe</label>
+                        <select class="form-control" id="studentClass" required>
+                            <option value="" disabled selected>Selecione a classe</option>
+                            <option value="Anciês de Jesus">Anciês de Jesus</option>
+                            <option value="Voz de Bétel">Voz de Bétel</option>
+                            <option value="Atalaia">Atalaia</option>
+                            <option value="Renascer em Cristo">Renascer em Cristo</option>
+                            <option value="Lírios dos Vales">Lírios dos Vales</option>
+                            <option value="Cordeirinhos">Cordeirinhos</option>
+                        </select>
+                        <small class="form-text text-muted">Escolha a classe da turma.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="enrolledStudents">Alunos Matriculados</label>
+                        <input type="number" class="form-control" id="enrolledStudents" placeholder="Digite o número de alunos matriculados" required>
+                        <small class="form-text text-muted">Informe o número total de alunos matriculados na turma.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="absentStudents">Alunos Ausentes</label>
+                        <input type="number" class="form-control" id="absentStudents" placeholder="Digite o número de alunos ausentes" required>
+                        <small class="form-text text-muted">Informe quantos alunos estão ausentes.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="presentStudents">Alunos Presentes</label>
+                        <input type="number" class="form-control" id="presentStudents" placeholder="Alunos Presentes" readonly>
+                        <small class="form-text text-muted">Este campo é preenchido automaticamente.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="visits">Visitas</label>
+                        <input type="number" class="form-control" id="visits" placeholder="Digite o número de visitas" required>
+                        <small class="form-text text-muted">Informe o número de visitas recebidas.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendanceRate">Total de Assistência</label>
+                        <input type="number" class="form-control" id="attendanceRate" placeholder="Total de Assistência" readonly>
+                        <small class="form-text text-muted">Este campo é preenchido automaticamente com a soma de alunos presentes e visitas.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="orphanStatus">Oferta (R$)</label>
+                        <input type="text" class="form-control" id="orphanStatus" placeholder="Digite o valor da oferta" required>
+                        <small class="form-text text-muted">Informe o valor da oferta em reais.</small>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="button">Cadastrar Turma</button>
+                        <a href="turmas.html" class="btn btn-secondary btn-custom btn-lg ml-2">Ver Lista de Turmas</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script/sidebar.js"></script> <!-- JavaScript do menu -->
+<script src="script/cadastro.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

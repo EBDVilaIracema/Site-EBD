@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/StyleSheet.css">
+    <link rel="stylesheet" href="style/buttons.css"> <!-- Link para o CSS dos botões -->
+    <link rel="stylesheet" href="style/sidebar.css"> <!-- Inclua o CSS do menu -->
+</head>
+<body>
+
+<header class="bg-primary text-white text-center py-4">
+    <h1>Lista de Turmas</h1>
+</header>
+
+
+<!-- Botão do menu fora do header -->
+<button id="openSidebar" class="button" style="position: fixed; right: 10px; top: 10px; z-index: 1100;">
+    Menu
+</button>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card p-4">
+                <h2>Filtrar Turmas</h2>
+                <div class="form-group">
+                    <label for="classFilter">Filtrar por Classe</label>
+                    <select class="form-control" id="classFilter">
+                        <option value="">Todas as Turmas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="classDateFilter">Filtrar por Data</label>
+                    <input type="date" class="form-control" id="classDateFilter">
+                </div>
+                <h2>Turmas Cadastradas</h2>
+                <ul id="classList" class="list-group mb-4">
+                    <!-- Turmas serão listadas aqui -->
+                </ul>
+                
+                <!-- Botão de voltar para a tela de cadastro -->
+                <button id="backToRegistrationButton" class="button">Voltar para Cadastro</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script/turma.js"></script>
+<script src="script/sidebar.js"></script> <!-- JavaScript do menu -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
