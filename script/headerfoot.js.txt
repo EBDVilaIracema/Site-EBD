@@ -1,0 +1,28 @@
+// headerfoot.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Carregar o header
+    fetch('header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o header');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar o header:', error));
+
+    // Carregar o footer
+    fetch('footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o footer');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar o footer:', error));
+});

@@ -1,0 +1,23 @@
+/* cloud.css */
+.cloud {
+    position: absolute;
+    top: 10%; /* Altura da nuvem no header */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 200px; /* Largura da nuvem */
+    height: 120px; /* Altura da nuvem */
+    background: url('path/to/your/cloud-image.png') no-repeat center center; /* Substitua pelo caminho da sua imagem de nuvem */
+    background-size: contain; /* Ajusta o tamanho da nuvem */
+    animation: float 6s ease-in-out infinite; /* Animação de flutuação */
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(-50%) translateY(0); /* Começa na posição original */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); /* Move para cima */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0); /* Volta para a posição original */
+    }
+}

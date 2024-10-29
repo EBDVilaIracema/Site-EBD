@@ -1,0 +1,40 @@
+/* menu.css */
+
+/* Estilos gerais do body */
+body {
+    background-color: #f4f4f9; /* Cor de fundo clara */
+}
+
+/* Estilo da navbar */
+.navbar {
+    background-color: #343a40; /* Cor do menu */
+}
+
+/* Estilo do texto da marca */
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff; /* Cor do texto da marca */
+}
+
+/* Estilo dos links do menu */
+.nav-link {
+    color: #ffffff; /* Cor dos links */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse nos links */
+.nav-link:hover {
+    color: #00bfff; /* Cor ao passar o mouse */
+    text-shadow: 0 0 5px #00bfff; /* Efeito de brilho ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumento */
+}
+
+/* Estilo do botão de menu colapsado */
+.navbar-toggler {
+    background-color: #00bfff; /* Cor do botão de menu colapsado */
+}
+
+/* Estilo do ícone do botão de menu colapsado */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23ffffff'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

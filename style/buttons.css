@@ -1,0 +1,167 @@
+/* buttons.css */
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 18px 36px; /* Tamanho do botão */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #ffffff; /* Cor do texto */
+    background-color: #007BFF; /* Azul padrão */
+    background: linear-gradient(45deg, #007BFF, #00A3E0); /* Gradiente azul moderno */
+    border: none;
+    border-radius: 50px; /* Bordas arredondadas */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    transition: color 1s ease; 
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2); /* Sombra mais suave */
+}
+
+.button:hover {
+    color: #ffffff; /* Texto branco para um contraste ideal */
+    background-color: #002147; /* Azul profundo e moderno */
+    box-shadow: 0 30px 70px rgba(0, 86, 179, 0.8), 0 0 0 6px rgba(255, 255, 255, 0.5); /* Sombra intensa e brilho sutil */
+    transform: translateY(-10px) scale(1.12); /* Elevação e escala para um efeito de destaque marcante */
+    transition: color 0.3s ease, background-color 0.4s ease, box-shadow 0.5s ease, transform 0.4s ease; /* Transições suaves e agradáveis */
+    cursor: pointer; /* Indica interatividade */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); /* Sombra no texto para um destaque adicional */
+    filter: brightness(1.1); /* Aumenta o brilho do botão ao passar o mouse */
+}
+
+.button:hover span {
+    text-shadow: 
+        0 0 25px rgba(0, 255, 255, 1),  /* Brilho intenso e vívido */
+        0 0 50px rgba(0, 255, 255, 0.9), /* Brilho amplo e iluminado */
+        0 0 80px rgba(0, 255, 255, 0.7), /* Halo forte e radiante */
+        0 0 100px rgba(0, 255, 255, 0.4), /* Efeito de halo suave */
+        0 0 120px rgba(0, 255, 255, 0.2); /* Halo sutil para profundidade extra */
+    transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out; /* Transições mais suaves e dinâmicas */
+    transform: scale(1.1); /* Aumento mais acentuado para um efeito de destaque maior */
+}
+
+
+
+
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15); /* Brilho suave */
+    border-radius: 50%;
+    transition: width 1s ease, height 1s ease, top 1s ease, left 1s ease; /* Tempo de transição aumentado */
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.button:hover::before {
+    width: 450%; /* Aumenta o tamanho para criar uma sensação de expansão maior */
+    height: 450%; /* Aumenta a altura para um efeito mais abrangente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3; /* Adiciona um leve brilho ao efeito */
+    transition: all 0.6s ease; /* Tempo de transição suave */
+}
+
+
+/* Efeito de onda baseado na posição do mouse */
+.button::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b3e5fc, #81d4fa, #4fc3f7, #29b6f6, #0091ea); /* Gradiente de azul */
+    transition: all 1.5s ease; /* Tempo de transição prolongado para suavidade */
+    z-index: 0;
+    pointer-events: none; /* Para que o mouse possa interagir com o botão */
+    opacity: 0; /* Começa invisível */
+    transform: scale(0); /* Começa encolhido */
+}
+
+.button:hover::after {
+    animation: wave 1.5s ease forwards; /* Inicia a animação da onda */
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.button:hover::after {
+    animation: wave 1.5s ease forwards; /* Inicia a animação da onda com tempo aumentado */
+}
+@keyframes wave {
+    0% {
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        opacity: 0; /* Começa invisível */
+        transform: translate(-10%, -80%) scale(0.8); /* Adiciona um leve encolhimento */
+    }
+    20% {
+        opacity: 1; /* Fica visível */
+        width: 150%; /* Crescimento inicial */
+        height: 150%;
+    }
+    40% {
+        width: 250%; /* Crescimento mais acentuado */
+        height: 250%;
+        transform: translate(-50%, -50%) scale(1.1); /* Pequeno aumento */
+    }
+    60% {
+        width: 350%; /* Alcança 350% */
+        height: 350%;
+    }
+    80% {
+        width: 400%; /* Alcança 400% */
+        height: 400%;
+        opacity: 0.7; /* Levemente transparente */
+    }
+    100% {
+        width: 400%;
+        height: 400%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0; /* Desaparece ao final */
+    }
+}
+
+
+.button span {
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima do efeito */
+    transition: 
+        color 0.6s ease, /* Transição suave da cor do texto */
+        transform 0.5s ease, /* Transição para transformação */
+        text-shadow 0.6s ease; /* Transição para o efeito de sombra */
+}
+
+/* Efeito ao passar o mouse */
+.button:hover span {
+    color: #aeeeee; /* Tom de azul claro que remete à água */
+    transform: translateY(-3px) scale(1.05); /* Leve elevação e aumento do texto */
+    text-shadow: 
+        0 0 15px rgba(0, 191, 255, 0.8), /* Brilho suave */
+        0 0 30px rgba(0, 191, 255, 0.5); /* Halo amplo */
+    
+    background: rgba(0, 191, 255, 0.3); /* Leve fundo aquático */
+    padding: 2px 5px; /* Espaçamento para destacar o fundo */
+    border-radius: 8px; /* Bordas mais arredondadas para suavizar */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+
+
+
+.button:focus {
+    outline: none; /* Remove a borda padrão do foco */
+    box-shadow: 
+        0 0 0 5px rgba(0, 191, 255, 0.8), /* Brilho mais intenso para destaque */
+        0 0 15px rgba(0, 191, 255, 0.5), /* Sombra suave para profundidade */
+        0 0 25px rgba(0, 255, 255, 0.3); /* Efeito de brilho adicional para um toque sofisticado */
+    transition: box-shadow 0.4s ease, transform 0.2s ease; /* Transição suave para o foco e leve elevação */
+    transform: translateY(-2px); /* Levanta o botão levemente para um efeito de flutuação */
+    border-radius: 10px; /* Bordas arredondadas para suavizar o efeito */
+}

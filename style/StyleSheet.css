@@ -1,0 +1,114 @@
+﻿:root {
+    --cor-fundo: #e0f7fa; /* Fundo azul claro e suave */
+    --cor-texto: #2c3e50; /* Texto escuro */
+    --cor-primaria: #007bff; /* Azul vibrante */
+    --cor-primaria-hover: #0056b3; /* Azul mais escuro ao passar o mouse */
+    --cor-secundaria: #28a745; /* Verde */
+    --cor-secundaria-hover: #218838; /* Verde mais escuro ao passar o mouse */
+    --cor-danger: #dc3545; /* Vermelho */
+    --cor-danger-hover: #c82333; /* Vermelho mais escuro ao passar o mouse */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--cor-primaria), #005f75); /* Gradiente azul */
+    color: white;
+    padding: 60px 0; /* Ajusta padding */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+}
+
+.card {
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco para os cards */
+    color: var(--cor-texto);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Espaço interno */
+    margin-bottom: 20px; /* Espaçamento entre cards */
+}
+
+.btn {
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 8px 12px; /* Diminuindo a área do botão */
+    font-size: 0.85rem; /* Tamanho da fonte menor */
+    font-weight: bold; /* Texto em negrito */
+    border: none;
+    position: relative; /* Para o efeito de sombra */
+}
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-secundaria-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.5);
+}
+
+/* Específico para o botão "Voltar para Cadastro" */
+#backToRegistrationButton {
+    font-size: 0.85rem; /* Tamanho da fonte menor */
+    padding: 5px 10px; /* Ajusta o padding do botão */
+}
+
+input, select {
+    background-color: #f9f9f9; /* Fundo claro para inputs */
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px;
+    width: calc(100% - 24px); /* Largura total menos o padding */
+    max-width: 100%; /* Evita que os inputs fiquem muito largos */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder {
+    color: #7f8c8d; /* Placeholder em cinza */
+}
+
+input:focus, select:focus {
+    border-color: #0056b3; /* Borda azul clara ao focar */
+    box-shadow: 0 0 5px rgba(34, 185, 255, 0.5); /* Sombra azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+h2 {
+    color: #005f75; /* Cor azul clara para os títulos */
+    border-bottom: 2px solid #005f75; /* Linha abaixo do título */
+    padding-bottom: 8px;
+    margin: 20px 0;
+    font-size: 1.8rem; /* Tamanho da fonte */
+    text-align: center;
+}
+
+.list-group-item {
+    background-color: #ffffff; /* Fundo claro para os itens da lista */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #e6f7ff; /* Azul claro ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
